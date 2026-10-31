@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "POCO-F9-ULTRA",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus2.actions.githubusercontent.com/rzT1LpoMEXIe7A8BLG6yHFnNYH0HgfdqZONzVA1Ajq3SijdT3l/",
+  "gitHubUrl": "https://github.com/cedricescondo/crud",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
