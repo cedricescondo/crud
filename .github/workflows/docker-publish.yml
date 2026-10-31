@@ -1,33 +1,25 @@
-
-name: Ionic Vue Docker Runner
+name: Ionic Vue Docker
 
 on:
   push:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Login to Docker Hub
-        run: |
-          echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login \
-            -u "${{ secrets.DOCKERHUB_USERNAME }}" \
-            --password-stdin
+      - name: Check Docker
+        run: docker --version
 
       - name: Build Docker Image
-        run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ionic-vue-firebase-crud:latest .
+        run: docker build -t cedricbakin06/ionic-vue-firebase-crud:latest .
 
       - name: Push Docker Image
-        run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/ionic-vue-firebase-crud:latest
-
-      - name: Logout Docker Hub
-        if: always()
-        run: docker logout
+        run: docker push cedricbakin06/ionic-vue-firebase-crud:latest
