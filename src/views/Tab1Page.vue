@@ -8,7 +8,7 @@
     </ion-header>
 
     <ion-content class="ion-padding">
-      <h2>Add New User 2</h2>
+      <h2>Add New User v2</h2>
 
       <form @submit.prevent="addUser">
         <ion-item>
