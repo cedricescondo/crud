@@ -3,12 +3,12 @@
   <ion-page>
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Create User 1</ion-title>
+        <ion-title>Create User 2</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content class="ion-padding">
-      <h2>Add New User bvbvhvhvahhaahahha</h2>
+      <h2>Add New User 1</h2>
 
       <form @submit.prevent="addUser">
         <ion-item>
